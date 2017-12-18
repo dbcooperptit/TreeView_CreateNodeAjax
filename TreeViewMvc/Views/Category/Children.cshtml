@@ -1,0 +1,24 @@
+﻿@model TreeViewMvc.Models.CategoriesModel
+    @foreach (var item in Model.Children)
+    {
+        <ul>
+            @if (item != null)
+            {
+              
+                <li id="@item.ID">
+                    @if (item.ID % 2 == 0)
+                    {
+                        <a href="#" class="cat jstree-disabled">@item.CategoryName</a>
+                    }
+                    else
+                    {
+                        <a href="#" class="cat">@item.CategoryName</a>
+                    }
+                    @if (item.Children.Count > 0)
+                    {
+                        @Html.Partial("Children", item)
+                    }
+                </li>
+            }
+        </ul>
+    }

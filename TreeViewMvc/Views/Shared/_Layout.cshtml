@@ -6,6 +6,8 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/jsTree/docs.css" rel="stylesheet" />
+    <link href="~/Content/jsTree/themes/default/style.css" rel="stylesheet"/>
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -37,6 +39,8 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/jsTree3/jstree.js"></script>
+    <script src="~/Scripts/jsTree3/jstree.min.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>
